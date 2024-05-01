@@ -9,14 +9,18 @@ app.use(express.json())
 
 
 /* ******************Defining Configuration Variables***************** */
-const db_connection = "mongodb+srv://admin:admin@cluster1.ujwzkvp.mongodb.net/statement1_student?retryWrites=true&w=majority"
-const port = 2324
+const username = "yourname"
+const password = "yourpassword"
+const db_connection = `mongodb+srv://${username}:${password}@cluster0.ztpt9jd.mongodb.net/student`
+const port = 8080
 
 
 /* *********************Defining Routs and Controllers********************* */
 
+
 // c. Insert array of documents in Collection. 
 app.post("/add", async function (request, response) {
+
     // get data from body
     const { Name, Roll_No, WAD_Marks, CC_Marks, DSBDA_Marks, CNS_Marks, AI_Marks } = request.body
     const student = await StudentMarks.create({ Name, Roll_No, WAD_Marks, CC_Marks, DSBDA_Marks, CNS_Marks, AI_Marks })

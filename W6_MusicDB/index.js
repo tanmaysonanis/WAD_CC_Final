@@ -9,8 +9,10 @@ app.use(express.json())
 
 
 /* ******************Defining Configuration Variables***************** */
-const db_connection = "mongodb+srv://admin:admin@cluster1.ujwzkvp.mongodb.net/statement2_music?retryWrites=true&w=majority"
-const port = 2324
+const username = "yourname"
+const password = "yourpassword"
+const db_connection = `mongodb+srv://${username}:${password}@cluster0.ztpt9jd.mongodb.net/music`
+const port = 8080
 
 
 /* *********************Defining Routs and Controllers********************* */
